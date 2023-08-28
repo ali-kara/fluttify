@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:fluttify/stepperwidget.dart';
 import 'package:local_auth/local_auth.dart';
 
 class FingerprintAuth extends StatefulWidget {
@@ -23,7 +24,7 @@ class _FingerprintAuthState extends State<FingerprintAuth> {
         localizedReason: "Scan your finger to authenticate",
         options: const AuthenticationOptions(
           stickyAuth: true,
-          // useErrorDialogs: true,
+          useErrorDialogs: true,
         ),
       );
     } on PlatformException catch (e) {
@@ -33,8 +34,14 @@ class _FingerprintAuthState extends State<FingerprintAuth> {
     setState(() {
       authorized =
           authenticated ? "Authorized success" : "Failed to authenticate";
+
       print(authorized);
     });
+
+    if (authenticated) {
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => StepperWidgetDemo()));
+    }
   }
 
   Future<void> _checkBiometric() async {
@@ -73,6 +80,8 @@ class _FingerprintAuthState extends State<FingerprintAuth> {
     _getAvailableBiometric();
 
     super.initState();
+
+    _authenticate();
   }
 
   @override
