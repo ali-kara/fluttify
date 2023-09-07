@@ -32,12 +32,17 @@ class MyApp extends StatelessWidget {
         ),
         scaffoldBackgroundColor: backgroundColor,
       ),
+      routes: {
+        "/auth": (context) => const FingerprintAuth(),
+        "/main": (context) => const StepperWidgetDemo(),
+      },
       home: const Scaffold(
         body: ResponsiveLayout(
           mobileScreenLayout: MobileScreenLayout(),
           webScreenLayout: WebScreenLayout(),
         ),
       ),
+      initialRoute: "/auth",
     );
   }
 }
