@@ -40,7 +40,7 @@ class _FingerprintAuthState extends State<FingerprintAuth> {
 
     if (authenticated) {
       Navigator.push(context,
-          MaterialPageRoute(builder: (context) => StepperWidgetDemo()));
+          MaterialPageRoute(builder: (context) => const StepperWidgetDemo()));
     }
   }
 
