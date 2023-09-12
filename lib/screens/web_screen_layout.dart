@@ -57,12 +57,12 @@ class WebScreenLayout extends StatelessWidget {
                     children: [
                       IconButton(
                         onPressed: () {},
-                        icon: Icon(Icons.emoji_emotions_outlined),
+                        icon: const Icon(Icons.emoji_emotions_outlined),
                         color: Colors.grey,
                       ),
                       IconButton(
                         onPressed: () {},
-                        icon: Icon(Icons.attach_file_outlined),
+                        icon: const Icon(Icons.attach_file_outlined),
                         color: Colors.grey,
                       ),
                       Expanded(
@@ -72,6 +72,7 @@ class WebScreenLayout extends StatelessWidget {
                             right: 15,
                           ),
                           child: TextField(
+                            cursorColor: cursorColor,
                             decoration: InputDecoration(
                               filled: true,
                               fillColor: searchBarColor,

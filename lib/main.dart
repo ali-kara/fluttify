@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fluttify/utils/biometric_auth_manager.dart';
 import 'package:fluttify/core/colors.dart';
 import 'package:fluttify/responsive/responsive_layout.dart';
 import 'package:fluttify/screens/mobile_screen_layout.dart';
 import 'package:fluttify/screens/web_screen_layout.dart';
-import 'package:fluttify/stepperwidget.dart';
 
 void main() => runApp(const MyApp());
 

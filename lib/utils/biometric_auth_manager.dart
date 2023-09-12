@@ -13,6 +13,8 @@ class FingerprintAuth extends StatefulWidget {
 class _FingerprintAuthState extends State<FingerprintAuth> {
   final auth = LocalAuthentication();
   String authorized = " not authorized";
+  
+  
   bool _canCheckBiometric = false;
   late List<BiometricType> _availableBiometric;
 
